@@ -1,0 +1,31 @@
+
+<app-search></app-search>
+
+<!-- Food -->
+<h2 class="name">Drinks</h2>
+<div class="container ">
+    <div class="row g-5 row-width" >
+        <div class="col-12 col-md-6 col-lg-4 "*ngFor="let drink of drinks">
+        <div class="card shadow">
+        <div class="aspect-ratio">
+          <img class="card-img-top" [src]="drink.imagePath" [alt]="drink.name">
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">{{drink.name}}</h5>
+            <p class="card-text">
+              {{drink.description}}
+            </p>
+          </div>
+        </div>
+        </div>
+      
+
+
+
+
+<!-- comment section -->
+<h3 class="comment-name">-Comment here-</h3>
+<div class="comment-background">
+</div>
+
+

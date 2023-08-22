@@ -1,0 +1,65 @@
+<app-header></app-header>
+ <div class="empty-space" style="height: 50px;"></div>
+        
+        <!-- Food -->
+        <div class="container">
+          <h2 class="name">Food</h2>
+          <div class="empty-space" style="height: 30px;"></div>
+          <div class="row g-5 row-width">
+                <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of items">
+                <div class="card shadow">
+                <div class="aspect-ratio">
+                  <img class="card-img-top" [src]="item.imagePath" [alt]="item.name" style="height:300px;object-fit:cover;">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text">{{item.description}}</p>
+
+                  </div>
+                </div>
+                
+                </div>
+                <button type="button" routerLink="/menu/food" class="btn btn-danger button-clz" style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;"> View More </button>
+             
+
+        <!-- Desserts -->
+        <h2 class="name">Desserts</h2> <div class="empty-space" style="height: 30px;"></div>
+
+        <div class="container">
+            <div class="row g-5 row-width">
+                <div class="col-12 col-md-6 col-lg-4" *ngFor="let dessert of desserts">
+                <div class="card shadow">
+                <div class="aspect-ratio">
+                  <img class="card-img-top" [src]="dessert.imagePath" [alt]="dessert.name" style="height:300px;object-fit:cover;">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{dessert.name}}</h5>
+                    <p class="card-text">{{dessert.description}}</p>
+
+                  </div>
+                </div>
+                </div>
+                <button type="button" routerLink="/menu/desserts" class="btn btn-danger button-clz" style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;"> View More </button>
+          
+        <!-- Drinks -->
+        <h2 class="name">Drinks</h2> <div class="empty-space" style="height:30px;"></div>
+
+        <div class="container">
+            <div class="row g-5 row-width">
+                <div class="col-12 col-md-6 col-lg-4" *ngFor="let drink of drinks">
+                <div class="card shadow">
+                <div class="aspect-ratio">
+                  <img class="card-img-top" [src]="drink.imagePath" [alt]="drink.name" style="height:300px;object-fit:cover;">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{drink.name}}</h5>
+                    <p class="card-text">{{drink.description}}</p>
+
+                  </div>
+                </div>
+                </div>
+                <button type="button" routerLink="/menu/drinks" class="btn btn-danger button-clz" style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;"> View More </button>
+            
+        <!-- comment section -->
+   
+<router-outlet></router-outlet>

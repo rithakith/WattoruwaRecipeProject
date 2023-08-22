@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*------------ Login container ------------*/
+
+.box-area{
+    width: 800px;
+}
+
+
+/*------------ Right box ------------*/
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+/*------------ Custom Placeholder ------------*/
+
+::placeholder{
+    font-size: 16px;
+}
+
+.rounded-4{
+    border-radius: 20px;
+    border-color: #783030;
+    border-width: 10px;
+}
+.rounded-5{
+    border-radius: 30px;
+    border-color: #783030;
+    border-width: 10px;
+}
+
+
+/*------------ For small screens------------*/
+
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
+}
+.btn-primary,
+            
+
+            .custom-btn {
+                background-color: #783030;
+                border-color: #783030;
+                color: white; /* Text color */
+            }
+
+            .btn-primary.custom-btn:hover {
+                background-color: white;
+                border-color: #8f3838;
+                color: #783030; /* Adding text color for better contrast */
+            }
+            
+            
+
+            .btn-primary:focus,
+            .btn-primary.focus,
+            .btn-primary.active {
+                box-shadow: 0 0 0 0.2rem rgba(120, 48, 48, 0.5);
+            }
+
+            .btn-primary.disabled,
+            .btn-primary:disabled {
+                background-color: #783030;
+                border-color: #783030;
+            }
+
+            .btn-primary:not(:disabled):not(.disabled):active,
+            .btn-primary:not(:disabled):not(.disabled).active,
+            .show > .btn-primary.dropdown-toggle {
+                background-color: #662a2a;
+                border-color: #662a2a;
+            }
+
+            .btn-primary:not(:disabled):not(.disabled):active:focus,
+            .btn-primary:not(:disabled):not(.disabled).active:focus,
+            .show > .btn-primary.dropdown-toggle:focus {
+                box-shadow: 0 0 0 0.2rem rgba(120, 48, 48, 0.5);
+            }
+
+
+         

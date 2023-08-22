@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container">
+    <img [src]="food.imagePath" [alt]="food.name">
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{food.name}}
+            </span>
+            <span class="favorite {{food.favorite? '':'not'}}">❤</span>
+            <br><br>
+
+            <div class="tags">
+                <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">{{tag}}</a>
+               </div>
+            <br>
+            <div class="calorieCount" style="font-weight: bold;">
+                🔍🔍        {{food.calorieAmount}}
+            </div><br>
+            <div class="ingredients">
+                <h3>Ingredients :</h3>
+
+                <ul>
+                    <li *ngFor="let ingredient of food.ingredients">{{ingredient}}</li>
+    
+                </ul>
+            </div>
+            
+            <h3>Directions :</h3>
+            <ol>
+                <li *ngFor="let direction of food.methods">{{direction}}</li>
+
+            </ol>
+        </div>
+    </div>
+</div>

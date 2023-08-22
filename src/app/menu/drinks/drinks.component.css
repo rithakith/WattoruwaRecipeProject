@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 150px;
+}
+/* filter */
+.button-cls{
+    background: linear-gradient(180deg, #F9B9A5 33%, rgba(237.14, 217.11, 178.25, 0) 100%);
+    margin-top: 20px;
+    margin-left: 163px;
+}
+/* search */
+.search-color{
+    background: linear-gradient(180deg, #F9B9A5 33%, rgba(237.14, 217.11, 178.25, 0) 100%);
+}
+.search-align{
+    margin-top: 20px;
+}
+
+/* food */
+.name{
+    color: #4D1919; 
+    font-size: 20px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    text-decoration: underline;
+    padding-left: 165px;
+    padding-top: 40px;
+
+}
+.card {
+    border: none;
+  }
+  
+.aspect-ratio {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 aspect ratio (change as needed) */
+    overflow: hidden;
+}
+  
+.aspect-ratio img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.row-width{
+    width: 96%;
+    padding-left: 80px;
+}
+  
+/* comment */
+.comment-name{
+    color: #4D1919;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    font-weight: 700px;
+    padding-left: 165px;
+    padding-top: 50px;
+}
+.comment-background{
+    width: 1120px; 
+    height: 80px; 
+    background: #EEDEB6; 
+    border-radius: 15px; 
+    margin-top: 10px;
+    margin-left: 163px;
+}
