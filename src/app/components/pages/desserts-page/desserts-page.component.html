@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container">
+    <img [src]="desserts.imagePath" [alt]="desserts.name">
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{desserts.name}}
+            </span>
+            <span class="favorite {{desserts.favorite? '':'not'}}">❤</span>
+            <br><br>
+
+            <div class="tags">
+                <a *ngFor="let tag of desserts.tags" routerLink="/tag/{{tag}}">{{tag}}</a>
+               </div>
+            <br>
+            <div class="calorieCount" style="font-weight: bold;">
+                🔍🔍        {{desserts.calorieAmount}}
+            </div><br>
+            <div class="ingredients">
+                <h3>Ingredients :</h3>
+
+                <ul>
+                    <li *ngFor="let ingredient of desserts.ingredients">{{ingredient}}</li>
+    
+                </ul>
+            </div>
+            
+            <h3>Directions :</h3>
+            <ol>
+                <li *ngFor="let direction of desserts.methods">{{direction}}</li>
+
+            </ol>
+        </div>
+    </div>
+</div>

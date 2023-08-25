@@ -7,4 +7,6 @@ export class Desserts{
     imagePath!: string;
     ingredients!:string[];
     methods!:string[];
+    tags?:string[];
+    calorieAmount!:string;
 }
