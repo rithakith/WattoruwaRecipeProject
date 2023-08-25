@@ -1,37 +1,40 @@
+<app-header></app-header>
+<br><br>
+<app-search></app-search>
+<br>
+<app-tags></app-tags><br>
+<div class="select" style="text-align: center;"><a routerLink="/filter" style="color:black;">Include or Exclude your Ingredients</a></div>
+<br><br><br>
+        <!-- Food -->
+     <ul>
+      <li *ngFor="let dessert of desserts">
+        <a routerLink="/desserts/{{dessert.id}}">
+          <img [src]="dessert.imagePath" [alt]="dessert.name">
+          <div class="content">
+            <div class="name">
+              {{dessert.name}}
+            </div>
 
 
-<div class="row">
-<div class="col">
-
-
-<!-- search -->
-
-
-<!-- Food -->
-<h2 class="name">Desserts</h2>
-<div class="container ">
-    <div class="row g-5 row-width" >
-        <div class="col-12 col-md-6 col-lg-4 "*ngFor="let dessert of desserts">
-        <div class="card shadow">
-        <div class="aspect-ratio">
-          <img class="card-img-top" [src]="dessert.imagePath" [alt]="dessert.name" style="height: 400px;object-fit:cover;">
-        </div>
-          <div class="card-body">
-            <h5 class="card-title">{{dessert.name}}</h5>
-            <p class="card-text">
-              {{dessert.description}}
-            </p>
+            <span class="favorite {{dessert.favorite?'':'not'}}">❤</span>
+            <!-- <div class="stars">
+              <star-rating [value]="food.stars"
+              [totalstars]="5"
+              checkedcolor="red"
+              uncheckedcolor="black"
+              size="22px"
+              [readonly]="true"></star-rating>
+            </div> -->
+          
           </div>
-        </div>
-        </div>
-      
 
+        </a>
+      </li>
+     </ul>
+        
 
+        
 
-
-<!-- comment section -->
-<h3 class="comment-name">-Comment here-</h3>
-<div class="comment-background">
-</div>
+        <!-- comment section -->
 
 
