@@ -20,6 +20,8 @@ import { LoginComponent } from './portfolio/login/login.component';
 import { SignupComponent } from './portfolio/signup/signup.component';
 import { IncludeExcludeComponent } from './include-exclude/include-exclude.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DrinksPageComponent } from './components/pages/drinks-page/drinks-page.component';
+import { DessertsPageComponent } from './components/pages/desserts-page/desserts-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     PortfolioComponent,
     LoginComponent,
     SignupComponent,
-    IncludeExcludeComponent
+    IncludeExcludeComponent,
+    DrinksPageComponent,
+    DessertsPageComponent
 
   ],
   imports: [

@@ -11,6 +11,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginComponent } from './portfolio/login/login.component';
 import { SignupComponent } from './portfolio/signup/signup.component';
 import { IncludeExcludeComponent } from './include-exclude/include-exclude.component';
+import { DrinksPageComponent } from './components/pages/drinks-page/drinks-page.component';
+import { DessertsPageComponent } from './components/pages/desserts-page/desserts-page.component';
 
 const routes: Routes = [
   {path:'menu/food', component:FoodComponent},
@@ -21,6 +23,8 @@ const routes: Routes = [
    {path:'menu/food/search/:searchTerm',component:FoodComponent},
    {path:'menu/drinks/search/:searchTerm',component:DrinksComponent} ,
   {path:'food/:id',component:FoodPageComponent},
+  {path:'drinks/:id',component:DrinksPageComponent},
+  {path:'desserts/:id',component:DessertsPageComponent},
   {path:'tag/:tag',component:FoodComponent},
   {path:'home',component:HomeComponent},
   {path:'calculator',component:CalculatorComponent},
