@@ -1,31 +1,37 @@
+<app-header></app-header>
+<br><br>
+<<app-search></app-search>>
+<br>
+<app-tags></app-tags><br>
+<div class="select" style="text-align: center;"><a routerLink="/filter" style="color:black;">Include or Exclude your Ingredients</a></div>
+<br><br><br>
+<!-- Drinks -->
+<ul>
+  <li *ngFor="let drink of drinks">
+    <a routerLink="/drink/{{drink.id}}">
+      <img [src]="drink.imagePath" [alt]="drink.name">
+      <div class="content">
+        <div class="name">
+          {{drink.name}}
+        </div>
 
-<app-search></app-search>
 
-<!-- Food -->
-<h2 class="name">Drinks</h2>
-<div class="container ">
-    <div class="row g-5 row-width" >
-        <div class="col-12 col-md-6 col-lg-4 "*ngFor="let drink of drinks">
-        <div class="card shadow">
-        <div class="aspect-ratio">
-          <img class="card-img-top" [src]="drink.imagePath" [alt]="drink.name">
-        </div>
-          <div class="card-body">
-            <h5 class="card-title">{{drink.name}}</h5>
-            <p class="card-text">
-              {{drink.description}}
-            </p>
-          </div>
-        </div>
-        </div>
+        <span class="favorite {{drink.favorite?'':'not'}}">❤</span>
+        <!-- <div class="stars">
+          <star-rating [value]="food.stars"
+          [totalstars]="5"
+          checkedcolor="red"
+          uncheckedcolor="black"
+          size="22px"
+          [readonly]="true"></star-rating>
+        </div> -->
       
+      </div>
 
+    </a>
+  </li>
+ </ul>
+    
 
-
-
-<!-- comment section -->
-<h3 class="comment-name">-Comment here-</h3>
-<div class="comment-background">
-</div>
 
 

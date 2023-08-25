@@ -1,75 +1,54 @@
-*{
-    margin: 0;
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
     padding: 0;
 }
-.header{
-    background-color: antiquewhite;
-    width: 100%;
-    height: 150px;
-}
-/* filter */
-.button-cls{
-    background: linear-gradient(180deg, #F9B9A5 33%, rgba(237.14, 217.11, 178.25, 0) 100%);
-    margin-top: 20px;
-    margin-left: 163px;
-}
-/* search */
-.search-color{
-    background: linear-gradient(180deg, #F9B9A5 33%, rgba(237.14, 217.11, 178.25, 0) 100%);
-}
-.search-align{
-    margin-top: 20px;
-}
 
-/* food */
-.name{
-    color: #4D1919; 
-    font-size: 20px; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bolder;
-    text-decoration: underline;
-    padding-left: 165px;
-    padding-top: 40px;
-
-}
-.card {
-    border: none;
-  }
-  
-.aspect-ratio {
-    position: relative;
-    width: 100%;
-    padding-bottom: 75%; /* 4:3 aspect ratio (change as needed) */
+li a{
+    height: 22.5rem ;
+    width: 20rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+    color: #e72929;
+    /* text-decoration: none; */
 }
-  
-.aspect-ratio img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
+li a:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+li a img{
     object-fit: cover;
+    height: 14.5rem;
 }
-.row-width{
-    width: 96%;
-    padding-left: 80px;
+
+.content{
+    margin-top: 0.3rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    height: 7rem;
 }
-  
-/* comment */
-.comment-name{
-    color: #4D1919;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 16px;
-    font-weight: 700px;
-    padding-left: 165px;
-    padding-top: 50px;
+.favorite{
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.2rem;
 }
-.comment-background{
-    width: 1120px; 
-    height: 80px; 
-    background: #EEDEB6; 
-    border-radius: 15px; 
-    margin-top: 10px;
-    margin-left: 163px;
+
+.favorite.not{
+    color:grey;
+}
+
+.product-item-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
