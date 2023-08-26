@@ -1,0 +1,59 @@
+.form-control, .form-select, .card, .btn
+{
+    border-radius: 15px;
+}
+.card{
+    border-style: solid;
+    border-width: thin;
+    border-color: #783030;
+    box-shadow: 12px 12px 2px 1px #783030;
+}
+.form-control, .form-select
+{
+    background: white;
+    color: black;
+}
+
+.form-select
+{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 0.75rem center !important;
+    background-size: 16px 12px !important;
+}
+
+.btn-success,
+.btn-success:not(:disabled):not(.disabled) {
+    background-color: #783030;
+    border-color: #783030;
+}
+
+.btn-success:hover {
+    background-color: white;
+    border-color: #8f3838;
+}
+
+.btn-success:focus,
+.btn-success.focus,
+.btn-success.active {
+    box-shadow: 0 0 0 0.2rem rgba(120, 48, 48, 0.5);
+}
+
+.btn-success.disabled,
+.btn-success:disabled {
+    background-color: #783030;
+    border-color: #783030;
+}
+
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle {
+    background-color: #662a2a;
+    border-color: #662a2a;
+}
+
+.btn-success:not(:disabled):not(.disabled):active:focus,
+.btn-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-success.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(120, 48, 48, 0.5);
+}

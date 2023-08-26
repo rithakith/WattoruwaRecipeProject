@@ -19,7 +19,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LoginComponent } from './portfolio/login/login.component';
 import { SignupComponent } from './portfolio/signup/signup.component';
 import { IncludeExcludeComponent } from './include-exclude/include-exclude.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DrinksPageComponent } from './components/pages/drinks-page/drinks-page.component';
 import { DessertsPageComponent } from './components/pages/desserts-page/desserts-page.component';
 
@@ -45,6 +45,7 @@ import { DessertsPageComponent } from './components/pages/desserts-page/desserts
 
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     RouterModule,
     AppRoutingModule,
