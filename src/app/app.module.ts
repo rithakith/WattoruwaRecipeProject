@@ -22,6 +22,8 @@ import { IncludeExcludeComponent } from './include-exclude/include-exclude.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DrinksPageComponent } from './components/pages/drinks-page/drinks-page.component';
 import { DessertsPageComponent } from './components/pages/desserts-page/desserts-page.component';
+import { DrinksSearchComponent } from './components/partials/drinks-search/drinks-search.component';
+import { DessertsSearchComponent } from './components/partials/desserts-search/desserts-search.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { DessertsPageComponent } from './components/pages/desserts-page/desserts
     DrinksComponent,
     DessertsComponent,
     FoodSearchComponent,
+    DrinksSearchComponent,
     FoodPageComponent,
     TagsComponent,
     HomeComponent,
@@ -41,7 +44,8 @@ import { DessertsPageComponent } from './components/pages/desserts-page/desserts
     SignupComponent,
     IncludeExcludeComponent,
     DrinksPageComponent,
-    DessertsPageComponent
+    DessertsPageComponent,
+    DessertsSearchComponent
 
   ],
   imports: [
