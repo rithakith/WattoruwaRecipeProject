@@ -3,8 +3,7 @@ import { Drinks } from '../shared/models/drinks';
 import { sample } from 'rxjs';
 import { sample_drinks } from 'src/drinks_data';
 import { Tag } from '../shared/models/tag';
-import { sample_tags } from 'src/food_data';
-
+import { sample_tags } from 'src/drinks_data';
 @Injectable({
   providedIn: 'root'
 })
@@ -25,10 +24,10 @@ export class DrinksService {
       return sample_tags;
     }
   
-    getAllFoodsByTag(tag:string):Drinks[]{
+    getAllDrinksByTag(tag:string):Drinks[]{
       return tag === "All"?
       this.getAll():
-      this.getAll().filter(food=>food.tags?.includes(tag));
+      this.getAll().filter(drinks=>drinks.tags?.includes(tag));
     }
   }
 
