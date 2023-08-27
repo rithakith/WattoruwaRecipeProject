@@ -27,6 +27,7 @@ import { DessertsSearchComponent } from './components/partials/desserts-search/d
 import { DrinksTagsComponent } from './components/partials/drinks-tags/drinks-tags.component';
 import { DessertsTagsComponent } from './components/partials/desserts-tags/desserts-tags.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RatingComponent } from './components/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { FooterComponent } from './components/footer/footer.component';
     DessertsSearchComponent,
     DrinksTagsComponent,
     DessertsTagsComponent,
-    FooterComponent
+    FooterComponent,
+    RatingComponent
 
   ],
   imports: [

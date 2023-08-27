@@ -14,8 +14,9 @@
             <div class="name">
               {{food.name}}
             </div>
-
-
+            <br>
+            <app-rating [stars]="food.stars"></app-rating><br><br>
+            
             <span class="favorite {{food.favorite?'':'not'}}">❤</span>
             <!-- <div class="stars">
               <star-rating [value]="food.stars"
