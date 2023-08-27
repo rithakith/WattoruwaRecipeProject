@@ -13,8 +13,8 @@ export class DessertsService {
   getAll():Desserts[]{
     return sample_desserts;
   }
- getDessertsByID(foodId:string):Desserts{
-    return this.getAll().find(food => food.id == foodId) ?? new Desserts(); }
+ getDessertsByID(dessertsId:string):Desserts{
+    return this.getAll().find(desserts => desserts.id == dessertsId) ?? new Desserts(); }
 
   getAllTags():Tag[]{
     return sample_tags;
@@ -23,7 +23,7 @@ export class DessertsService {
   getAllDessertsByTag(tag:string):Desserts[]{
     return tag === "All"?
     this.getAll():
-    this.getAll().filter(food=>food.tags?.includes(tag));
+    this.getAll().filter(desserts=>desserts.tags?.includes(tag));
   }
 
   getAllDessertsBySearchTerm(searchTerm:string){

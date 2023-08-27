@@ -28,6 +28,8 @@ const routes: Routes = [
   {path:'desserts/:id',component:DessertsPageComponent},
   {path:'menu/food/tag/:tag',component:FoodComponent},
   {path:'menu/drinks/tag/:tag',component:DrinksComponent},
+  {path:'menu/desserts/tag/:tag',component:DessertsComponent},
+
   {path:'home',component:HomeComponent},
   {path:'calculator',component:CalculatorComponent},
   {path:'login',component:LoginComponent},
