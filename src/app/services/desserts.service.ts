@@ -25,4 +25,8 @@ export class DessertsService {
     this.getAll():
     this.getAll().filter(food=>food.tags?.includes(tag));
   }
+
+  getAllDessertsBySearchTerm(searchTerm:string){
+    return this.getAll().filter(desserts=>desserts.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  }
 }

@@ -2,7 +2,6 @@ import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DrinksService } from 'src/app/services/drinks.service';
 import { Drinks } from 'src/app/shared/models/drinks';
-
 @Component({
   selector: 'app-drinks',
   templateUrl: './drinks.component.html',
