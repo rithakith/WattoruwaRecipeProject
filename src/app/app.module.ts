@@ -12,7 +12,7 @@ import { DessertsComponent } from './menu/desserts/desserts.component';
 
 import { FoodSearchComponent } from './components/partials/food_search/search.component';
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
-import { TagsComponent } from './components/partials/tags/tags.component';
+import { TagsComponent } from './components/partials/food_tags/tags.component';
 import { HomeComponent } from './home/home.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -24,6 +24,8 @@ import { DrinksPageComponent } from './components/pages/drinks-page/drinks-page.
 import { DessertsPageComponent } from './components/pages/desserts-page/desserts-page.component';
 import { DrinksSearchComponent } from './components/partials/drinks-search/drinks-search.component';
 import { DessertsSearchComponent } from './components/partials/desserts-search/desserts-search.component';
+import { DrinksTagsComponent } from './components/partials/drinks-tags/drinks-tags.component';
+import { DessertsTagsComponent } from './components/partials/desserts-tags/desserts-tags.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { DessertsSearchComponent } from './components/partials/desserts-search/d
     IncludeExcludeComponent,
     DrinksPageComponent,
     DessertsPageComponent,
-    DessertsSearchComponent
+    DessertsSearchComponent,
+    DrinksTagsComponent,
+    DessertsTagsComponent
 
   ],
   imports: [
