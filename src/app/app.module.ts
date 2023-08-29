@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -27,6 +27,9 @@ import { DessertsSearchComponent } from './components/partials/desserts-search/d
 import { DrinksTagsComponent } from './components/partials/drinks-tags/drinks-tags.component';
 import { DessertsTagsComponent } from './components/partials/desserts-tags/desserts-tags.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RatingComponent } from './components/rating/rating.component';
+import { LoadingComponent } from './components/partials/loading/loading.component';
+import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,9 @@ import { FooterComponent } from './components/footer/footer.component';
     DessertsSearchComponent,
     DrinksTagsComponent,
     DessertsTagsComponent,
-    FooterComponent
+    FooterComponent,
+    RatingComponent,
+    LoadingComponent
 
   ],
   imports: [
@@ -63,7 +68,9 @@ import { FooterComponent } from './components/footer/footer.component';
 
     // RatingModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:LoadingInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -17,7 +17,7 @@ li a{
     flex-direction: column;
     overflow: hidden;
     color: #e72929;
-    /* text-decoration: none; */
+    text-decoration: none;
 }
 
 li a:hover{
