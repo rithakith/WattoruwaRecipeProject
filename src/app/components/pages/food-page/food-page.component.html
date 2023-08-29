@@ -7,8 +7,8 @@
             <span class="name">
                 {{food.name}}
             </span>
-            <span class="favorite {{food.favorite? '':'not'}}">❤</span>
-            <br>
+            <span *ngIf="food.favorite" class="heart-icon favorite" title="Remove from Favorites">&#10084;</span>
+            <span *ngIf="!food.favorite" class="heart-icon favorite" style="color: grey;" title="Favorite this recipe">🖤</span>            <br>
             <app-rating [stars]="food.stars"></app-rating><br><br>
             <div class="tags">
                 <a *ngFor="let tag of food.tags" routerLink="/menu/food/tag/{{tag}}">{{tag}}</a>
@@ -17,6 +17,10 @@
             <div class="calorieCount" style="font-weight: bold;">
                 🔍🔍        {{food.calorieAmount}}
             </div><br>
+            <div class="description">
+                <h3>Description :</h3>
+                <p>{{food.description}}</p>
+            </div>
             <div class="ingredients">
                 <h3>Ingredients :</h3>
 
