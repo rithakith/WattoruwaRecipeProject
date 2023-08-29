@@ -53,3 +53,19 @@ li a img{
     justify-content: space-between;
     align-items: flex-start;
 }
+.name {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heart-icon {
+    font-size: 20px;
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: translate(50%, -50%);
+}
+

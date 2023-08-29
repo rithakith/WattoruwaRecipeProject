@@ -13,12 +13,14 @@
           <div class="content">
             <div class="name">
               {{food.name}}
+              <span *ngIf="food.favorite" class="heart-icon">&#10084;</span>
+              <span *ngIf="!food.favorite" class="heart-icon" style="color: grey;">🖤</span>
             </div>
+            
+      
             <br>
             <app-rating [stars]="food.stars"></app-rating><br><br>
-            
-            <span class="favorite {{food.favorite?'':'not'}}">❤</span>
-            <!-- <div class="stars">
+                <!-- <div class="stars">
               <star-rating [value]="food.stars"
               [totalstars]="5"
               checkedcolor="red"

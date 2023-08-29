@@ -13,7 +13,7 @@ import { Component,Input } from '@angular/core';
     styles: [`
     .filled-star {
       font-size: 150%;
-      color: orange;
+      color:#e72929;
       
     }
     .border-star {
