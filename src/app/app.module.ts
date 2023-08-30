@@ -30,6 +30,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { LoadingComponent } from './components/partials/loading/loading.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { CommentsModule } from './comments/comments.module';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,9 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommentsModule,
+    HttpClientModule
 
     // RatingModule
   ],
