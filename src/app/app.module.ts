@@ -15,7 +15,6 @@ import { FoodPageComponent } from './components/pages/food-page/food-page.compon
 import { TagsComponent } from './components/partials/food_tags/tags.component';
 import { HomeComponent } from './home/home.component';
 import { CalculatorComponent } from './calculator/calculator.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LoginComponent } from './portfolio/login/login.component';
 import { SignupComponent } from './portfolio/signup/signup.component';
 import { IncludeExcludeComponent } from './include-exclude/include-exclude.component';
@@ -31,6 +30,12 @@ import { RatingComponent } from './components/rating/rating.component';
 import { LoadingComponent } from './components/partials/loading/loading.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 
+import { environment } from '../environments/environment';
+import { AngularFireModule} from '@angular/fire/compat';
+import { VerifyEmailComponent } from './portfolio/verify-email/verify-email.component';
+import { DashboardComponent } from './portfolio/dashboard/dashboard.component';
+import { ForgotPasswordComponent } from './portfolio/forgot-password/forgot-password.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +50,6 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     TagsComponent,
     HomeComponent,
     CalculatorComponent,
-    PortfolioComponent,
     LoginComponent,
     SignupComponent,
     IncludeExcludeComponent,
@@ -56,7 +60,10 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     DessertsTagsComponent,
     FooterComponent,
     RatingComponent,
-    LoadingComponent
+    LoadingComponent,
+    VerifyEmailComponent,
+    DashboardComponent,
+    ForgotPasswordComponent
 
   ],
   imports: [
@@ -64,7 +71,10 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase)
+  
 
     // RatingModule
   ],

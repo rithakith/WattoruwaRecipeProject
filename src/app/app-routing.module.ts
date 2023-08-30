@@ -13,13 +13,16 @@ import { SignupComponent } from './portfolio/signup/signup.component';
 import { IncludeExcludeComponent } from './include-exclude/include-exclude.component';
 import { DrinksPageComponent } from './components/pages/drinks-page/drinks-page.component';
 import { DessertsPageComponent } from './components/pages/desserts-page/desserts-page.component';
+import { DashboardComponent } from './portfolio/dashboard/dashboard.component';
+import { ForgotPasswordComponent } from './portfolio/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './portfolio/verify-email/verify-email.component'; 
 
 const routes: Routes = [
   {path:'menu/food', component:FoodComponent},
   {path:'menu/drinks',component:DrinksComponent},
   {path:'menu/desserts',component:DessertsComponent},
   {path:'menu',component:MenuComponent},
-  {path:'',component:HomeComponent},
+  {path:'', redirectTo: 'login', pathMatch:'full'},
    {path:'menu/food/search/:searchTerm',component:FoodComponent},
    {path:'menu/drinks/search/:searchTerm',component:DrinksComponent} ,
    {path:'menu/desserts/search/:searchTerm',component:DessertsComponent} ,
@@ -34,7 +37,10 @@ const routes: Routes = [
   {path:'calculator',component:CalculatorComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
-  {path:'filter',component:IncludeExcludeComponent}
+  {path:'dashboard',component:DashboardComponent},
+  {path:'filter',component:IncludeExcludeComponent},
+  {path:'forgot-password',component:ForgotPasswordComponent},
+  {path:'verify-email',component:VerifyEmailComponent}
 ];
 
 @NgModule({

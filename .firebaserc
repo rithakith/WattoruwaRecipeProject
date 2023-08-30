@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "traditional-foods-b7cee": {
+      "hosting": {
+        "final": [
+          "traditional-foods-b7cee"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "traditional-foods-b7cee"
+  }
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { AuthService } from 'src/app/shared/authservice/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,30 +8,40 @@ import{FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm! :FormGroup;
-  isSubmitted = false;
-  constructor(private formBuilder:FormBuilder){}
+  email : string = '';
+  password : string = '';
+
+  constructor(private auth : AuthService) { }
 
   ngOnInit(): void {
-    this.loginForm = this.formBuilder.group({
-      email:['', [Validators.required, Validators.email]],
-      password:['', Validators.required]
-    });
-
-    //
   }
 
-  get fc()
-  {
-    return this.loginForm.controls;
-  }
+  login() {
 
-  submit()
-  {
-    this.isSubmitted = true;
-    if(this.loginForm.invalid) return;
+    console.log('Email:', this.email);
+    console.log('Password:', this.password);
+
+    if(this.email == '') {
+      alert('Please enter email');
+      return;
+    }
+
+    if(this.password == '') {
+      alert('Please enter password');
+      return;
+    }
+
+    this.auth.login(this.email,this.password);
     
-    alert( `email: ${this.fc.email.value},
-    password: ${this.fc.password.value}`)
+    this.email = '';
+    this.password = '';
+
   }
+
+  googleSignIn() {
+    this.auth.googleSignIn();
+  }
+
+ 
+ 
 }

@@ -1,16 +1,5 @@
 <app-header></app-header>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Signup page</title>
-</head>
-<body>
-
 
     <!----------------------- Main Container -------------------------->
 
@@ -37,14 +26,12 @@
                 <div class="header-text mb-4">
                      <h2>Create Account</h2>
                 </div>
+    
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username">
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email address" [(ngModel)]="email">
                 </div>
                 <div class="input-group mb-1">
-                    <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                    <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" [(ngModel)]="password">
                     <br>
                 </div>
                 
@@ -52,9 +39,9 @@
                     
                 </div>
                 <div class="input-group mb-3">
-                    <a href="#Homepage">
-                        <button class="btn btn-primary custom-btn w-100 fs-6" type="submit"  >Sign up</button>
-                    </a>
+         
+                        <button class="btn btn-primary custom-btn w-100 fs-6" type="submit" (click)="register()" >Sign up</button>
+
                     
 
                 </div>
@@ -67,6 +54,3 @@
 
       </div>
     </div>
-
-</body>
-</html>
