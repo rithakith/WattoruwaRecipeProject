@@ -79,4 +79,9 @@
 .name{
     color: #e72929;
     text-align: center;
+
+}
+.container{
+    margin-top: 20px;
+    margin-bottom: 0;
 }
