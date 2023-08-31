@@ -14,6 +14,8 @@
                 <a *ngFor="let tag of drinks.tags" routerLink="/tag/{{tag}}">{{tag}}</a>
                </div>
             <br>
+            <h6>Cook Time : {{drinks.cookTime}} minutes ⏰🍛</h6>
+               <br><br>
             <div class="calorieCount" style="font-weight: bold;">
                 🔍🔍        {{drinks.calorieAmount}}
             </div><br>
@@ -34,5 +36,7 @@
         </div>
     </div>
 </div>
+<comments currentUserId="2"></comments>
+
 
 <app-footer></app-footer>
