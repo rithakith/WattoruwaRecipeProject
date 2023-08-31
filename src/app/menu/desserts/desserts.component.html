@@ -11,14 +11,17 @@
         <a routerLink="/desserts/{{dessert.id}}">
           <img [src]="dessert.imagePath" [alt]="dessert.name">
           <div class="content">
-            <div class="name">
+            <h5 class="name">
               {{dessert.name}}
-            </div>
+            </h5>
             <br>
+            <div style="color: black;">Cook Time : {{dessert.cookTime}} minutes ⏰🍛</div>
+    
             <app-rating [stars]="dessert.stars"></app-rating><br><br>
-
-
-            <span class="favorite {{dessert.favorite?'':'not'}}">❤</span>
+    
+    
+            <span *ngIf="dessert.favorite" class="heart-icon">&#10084;</span>
+            <span *ngIf="!dessert.favorite" class="heart-icon" style="color: grey;">🖤</span>     
             <!-- <div class="stars">
               <star-rating [value]="food.stars"
               [totalstars]="5"

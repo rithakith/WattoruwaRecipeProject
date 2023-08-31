@@ -11,12 +11,17 @@
         <a routerLink="/food/{{food.id}}">
           <img [src]="food.imagePath" [alt]="food.name">
           <div class="content">
-            <div class="name">
+            <h5 class="name">
               {{food.name}}
-              <span *ngIf="food.favorite" class="heart-icon">&#10084;</span>
-              <span *ngIf="!food.favorite" class="heart-icon" style="color: grey;">🖤</span>
-            </div>
-            
+            </h5>
+            <br>
+            <div style="color: black;">Cook Time : {{food.cookTime}} minutes ⏰🍛</div>
+    
+            <app-rating [stars]="food.stars"></app-rating><br><br>
+    
+    
+            <span *ngIf="food.favorite" class="heart-icon">&#10084;</span>
+            <span *ngIf="!food.favorite" class="heart-icon" style="color: grey;">🖤</span>  
       
             <br>
             <app-rating [stars]="food.stars"></app-rating><br><br>
