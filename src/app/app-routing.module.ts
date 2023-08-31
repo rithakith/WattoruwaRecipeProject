@@ -16,6 +16,7 @@ import { DessertsPageComponent } from './components/pages/desserts-page/desserts
 import { DashboardComponent } from './portfolio/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './portfolio/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './portfolio/verify-email/verify-email.component'; 
+import { UserFormComponent } from './components/user-form/user-form.component';
 
 const routes: Routes = [
   {path:'menu/food', component:FoodComponent},
@@ -40,7 +41,8 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
   {path:'filter',component:IncludeExcludeComponent},
   {path:'forgot-password',component:ForgotPasswordComponent},
-  {path:'verify-email',component:VerifyEmailComponent}
+  {path:'verify-email',component:VerifyEmailComponent},
+  {path:'user-form',component:UserFormComponent}
 ];
 
 @NgModule({

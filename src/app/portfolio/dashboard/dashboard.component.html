@@ -1,1 +1,4 @@
-<p>dashboard works!</p>
+<p>Welcome to the dashboard, {{ userEmail }}!</p>
+<p>Your UID is: {{ userUID }}</p>
+<button *ngIf="userEmail" (click)="logout()">Log Out</button>
+<app-user-form></app-user-form>

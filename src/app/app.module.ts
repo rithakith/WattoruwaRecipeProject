@@ -35,6 +35,7 @@ import { AngularFireModule} from '@angular/fire/compat';
 import { VerifyEmailComponent } from './portfolio/verify-email/verify-email.component';
 import { DashboardComponent } from './portfolio/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './portfolio/forgot-password/forgot-password.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { ForgotPasswordComponent } from './portfolio/forgot-password/forgot-pass
     LoadingComponent,
     VerifyEmailComponent,
     DashboardComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    UserFormComponent
 
   ],
   imports: [
