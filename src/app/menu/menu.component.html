@@ -1,5 +1,5 @@
 <app-header></app-header>
- <div class="empty-space" style="height: 50px;"></div>
+ <div class="empty-space" style="height:150px;"></div>
         
         <!-- Food -->
         <div class="container">
@@ -13,8 +13,9 @@
                 </div>
                   <div class="card-body">
                     <h5 class="card-title">{{item.name}}</h5>
-                    <!-- <app-rating [stars]="item.stars"></app-rating><br><br> -->
-                    
+                    <app-rating [stars]="item.stars"></app-rating><br><br>
+                    <h6>Cook Time : {{item.cookTime}} minutes ⏰🍛</h6>
+
                   </div>
                 </div>
                 
@@ -34,7 +35,9 @@
                 </div>
                   <div class="card-body">
                     <h5 class="card-title">{{dessert.name}}</h5>
-                    <p class="card-text">{{dessert.description}}</p>
+                    <app-rating [stars]="dessert.stars"></app-rating><br><br>
+                    <h6>Cook Time : {{dessert.cookTime}} minutes ⏰🍛</h6>
+
 
                   </div>
                 </div>
@@ -53,13 +56,17 @@
                 </div>
                   <div class="card-body">
                     <h5 class="card-title">{{drink.name}}</h5>
-                    <p class="card-text">{{drink.description}}</p>
+                    <app-rating [stars]="drink.stars"></app-rating><br><br>
+                    <h6>Cook Time : {{drink.cookTime}} minutes ⏰🍛</h6>
 
                   </div>
                 </div>
                 </div>
                 <button type="button" routerLink="/menu/drinks" class="btn btn-danger button-clz" style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;"> View More </button>
-            
+                
         <!-- comment section -->
-   
+ 
+        
 <router-outlet></router-outlet>
+
+<app-footer></app-footer>

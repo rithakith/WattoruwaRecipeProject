@@ -1,0 +1,132 @@
+{
+  "comments": [
+    {
+      "id": "1",
+      "body": "First comment",
+      "username": "USER1",
+      "userId": "1",
+      "parentId": null,
+      "createdAt": "2021-08-16T23:00:33.010+02:00"
+    },
+    {
+      "id": "2",
+      "body": "Second comment",
+      "username": "USER2",
+      "userId": "2",
+      "parentId": null,
+      "createdAt": "2021-08-16T23:00:33.010+02:00"
+    },
+    {
+      "id": "3",
+      "body": "First comment first child",
+      "username": "USER2",
+      "userId": "2",
+      "parentId": "1",
+      "createdAt": "2021-08-16T23:00:33.010+02:00"
+    },
+    {
+      "id": "4",
+      "body": "Second comment second child",
+      "username": "USER2",
+      "userId": "2",
+      "parentId": "2",
+      "createdAt": "2021-08-16T23:00:33.010+02:00"
+    },
+    {
+      "body": "gfggf",
+      "parentId": null,
+      "createdAt": "2022-02-10T09:15:57.873Z",
+      "userId": "1",
+      "username": "USER1",
+      "id": "3YtrbAq"
+    },
+    {
+      "body": "hghghggh",
+      "parentId": "3YtrbAq",
+      "createdAt": "2022-02-10T09:16:01.597Z",
+      "userId": "1",
+      "username": "USER1",
+      "id": "e2sALRM"
+    },
+    {
+      "body": "fjdsdkjflksdjf",
+      "parentId": null,
+      "createdAt": "2023-08-30T02:36:20.215Z",
+      "userID": "1",
+      "username": "USER1",
+      "id": "wcyUFKJ"
+    },
+    {
+      "body": "jhjjk",
+      "parentId": null,
+      "createdAt": "2023-08-30T07:53:10.200Z",
+      "userID": "1",
+      "username": "USER1",
+      "id": "XxI44Lu"
+    },
+    {
+      "body": "kdsjkfsdjfdsa",
+      "parentId": null,
+      "createdAt": "2023-08-30T08:18:30.017Z",
+      "userID": "1",
+      "username": "USER1",
+      "id": "HMmxvXw"
+    },
+    {
+      "body": "kdsjkfsdjfdsa",
+      "parentId": null,
+      "createdAt": "2023-08-30T08:18:30.447Z",
+      "userID": "1",
+      "username": "USER1",
+      "id": "fZabYqm"
+    },
+    {
+      "body": "jfdskajfls",
+      "parentId": null,
+      "createdAt": "2023-08-30T08:19:09.384Z",
+      "userID": "1",
+      "username": "USER1",
+      "id": "V2MBHgt"
+    },
+    {
+      "body": "this is my comment",
+      "parentId": null,
+      "createdAt": "2023-08-30T08:45:54.130Z",
+      "userID": "1",
+      "username": "USER1",
+      "id": "V9gdmc9"
+    },
+    {
+      "body": "kdjkfjdslf",
+      "parentId": null,
+      "createdAt": "2023-08-30T08:48:36.445Z",
+      "userID": "1",
+      "username": "USER1",
+      "id": "RshW52h"
+    },
+    {
+      "body": "hey",
+      "parentId": null,
+      "createdAt": "2023-08-30T09:09:21.865Z",
+      "userId": "1",
+      "username": "USER1",
+      "id": "e7EN6xl"
+    },
+    {
+      "body": "this is stupid",
+      "parentId": "1",
+      "createdAt": "2023-08-30T09:11:14.043Z",
+      "userId": "1",
+      "username": "USER1",
+      "id": "t629CvC"
+    },
+    {
+      "body": "sup",
+      "parentId": "e7EN6xl",
+      "createdAt": "2023-08-30T09:24:27.091Z",
+      "userId": "1",
+      "username": "John",
+      "id": "Mn0YDyg"
+    }
+  ]
+}

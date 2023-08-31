@@ -29,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { LoadingComponent } from './components/partials/loading/loading.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { CommentsModule } from './comments/comments.module';
 
 import { environment } from '../environments/environment';
 import { AngularFireModule} from '@angular/fire/compat';
@@ -75,6 +76,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    CommentsModule,
     AngularFireModule.initializeApp(environment.firebase)
   
 
