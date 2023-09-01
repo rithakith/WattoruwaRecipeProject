@@ -9,4 +9,5 @@ export class Food{
     methods!:string[];
     tags?:string[];
     calorieAmount!:string;
+    cookTime!:string;
 }
