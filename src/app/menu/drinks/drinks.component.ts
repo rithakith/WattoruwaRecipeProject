@@ -8,6 +8,8 @@ import { Drinks } from 'src/app/shared/models/drinks';
   styleUrls: ['./drinks.component.css']
 })
 export class DrinksComponent implements OnInit {
+  notFoundRedirectUrl = '/menu/drinks';
+
   drinks: Drinks[] = [];
   constructor(private drinksService: DrinksService, activatedRoute: ActivatedRoute) {
     activatedRoute.params.subscribe((params) => {

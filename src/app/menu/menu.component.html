@@ -12,10 +12,16 @@
                   <img class="card-img-top" [src]="item.imagePath" [alt]="item.name" style="height:300px;object-fit:cover;">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title">{{item.name}}</h5>
-                    <app-rating [stars]="item.stars"></app-rating><br><br>
-                    <h6>Cook Time : {{item.cookTime}} minutes ⏰🍛</h6>
-
+                    <h5 class="card-title">{{item.name}}</h5><br>
+                    <div class="row">
+                      <div class="col"><app-rating [stars]="item.stars"></app-rating></div>
+                      <div style="color: black;" class="col">{{item.cookTime}} minutes ⏰</div>
+                    </div>
+                      
+                      <div class="calorieCount row" >
+                      🥠🥠{{item.calorieAmount}} calories
+                    </div>
+                
                   </div>
                 </div>
                 
@@ -34,10 +40,13 @@
                   <img class="card-img-top" [src]="dessert.imagePath" [alt]="dessert.name" style="height:300px;object-fit:cover;">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title">{{dessert.name}}</h5>
-                    <app-rating [stars]="dessert.stars"></app-rating><br><br>
-                    <h6>Cook Time : {{dessert.cookTime}} minutes ⏰🍛</h6>
-
+                    <h5 class="card-title">{{dessert.name}}</h5><br>
+                    <div class="row">
+                      <div class="col"><app-rating [stars]="dessert.stars"></app-rating></div>
+                    <div class="col">{{dessert.cookTime}} minutes ⏰</div></div>
+                    <div class="calorieCount row" >
+                      🥠🥠{{dessert.calorieAmount}} calories
+                  </div>
 
                   </div>
                 </div>
@@ -55,9 +64,13 @@
                   <img class="card-img-top" [src]="drink.imagePath" [alt]="drink.name" style="height:300px;object-fit:cover;">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title">{{drink.name}}</h5>
-                    <app-rating [stars]="drink.stars"></app-rating><br><br>
-                    <h6>Cook Time : {{drink.cookTime}} minutes ⏰🍛</h6>
+                    <h5 class="card-title">{{drink.name}}</h5><br>
+                    <div class="row">
+                      <div class="col"><app-rating [stars]="drink.stars"></app-rating></div>
+                    <div class="col">{{drink.cookTime}} minutes ⏰</div></div>
+                    <div class="calorieCount row" >
+                      🥠🥠{{drink.calorieAmount}} calories
+                  </div>
 
                   </div>
                 </div>
@@ -65,7 +78,7 @@
                 <button type="button" routerLink="/menu/drinks" class="btn btn-danger button-clz" style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;"> View More </button>
                 
         <!-- comment section -->
- 
+            </div></div></div></div></div></div><br><br><br>
         
 <router-outlet></router-outlet>
 

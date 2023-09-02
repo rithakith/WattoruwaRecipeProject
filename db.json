@@ -17,14 +17,6 @@
       "createdAt": "2021-08-16T23:00:33.010+02:00"
     },
     {
-      "id": "3",
-      "body": "First comment first child",
-      "username": "USER2",
-      "userId": "2",
-      "parentId": "1",
-      "createdAt": "2021-08-16T23:00:33.010+02:00"
-    },
-    {
       "id": "4",
       "body": "Second comment second child",
       "username": "USER2",
@@ -127,6 +119,22 @@
       "userId": "1",
       "username": "John",
       "id": "Mn0YDyg"
+    },
+    {
+      "body": "dfsajjfsoijfad",
+      "parentId": "2",
+      "createdAt": "2023-08-31T10:55:38.993Z",
+      "userId": "1",
+      "username": "John",
+      "id": "PNc7bWZ"
+    },
+    {
+      "body": "dfsdf",
+      "parentId": "2",
+      "createdAt": "2023-08-31T10:56:42.886Z",
+      "userId": "1",
+      "username": "Rithara",
+      "id": "Oe6fGZ9"
     }
   ]
 }

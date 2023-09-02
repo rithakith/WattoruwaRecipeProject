@@ -8,8 +8,8 @@ ul{
 }
 
 li a{
-    height: 22.5rem ;
-    width: 20rem;
+    height: 25rem ;
+    width: 23rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
     margin: 0.5rem;
@@ -64,8 +64,8 @@ li a img{
     font-size: 20px;
     color: red;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     transform: translate(50%, -50%);
 }
 

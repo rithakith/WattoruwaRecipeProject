@@ -35,6 +35,7 @@ import { VerifyEmailComponent } from './portfolio/verify-email/verify-email.comp
 import { DashboardComponent } from './portfolio/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './portfolio/forgot-password/forgot-password.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { NotFoundComponent } from './components/partials/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { UserFormComponent } from './components/user-form/user-form.component';
     VerifyEmailComponent,
     DashboardComponent,
     ForgotPasswordComponent,
-    UserFormComponent
+    UserFormComponent,
+    NotFoundComponent
 
   ],
   imports: [

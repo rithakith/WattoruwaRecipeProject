@@ -9,6 +9,8 @@ import { Food } from 'src/app/shared/models/food';
   styleUrls: ['./food.component.css']
 })
 export class FoodComponent implements OnInit{
+  notFoundRedirectUrl = '/menu/food';
+
   foods: Food[]=[];
   constructor(private foodService:FoodService,activatedRoute:ActivatedRoute){
     activatedRoute.params.subscribe((params)=>{

@@ -9,4 +9,5 @@ export class Desserts{
     methods!:string[];
     tags?:string[];
     calorieAmount!:string;
+    cookTime!:string;
 }

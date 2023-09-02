@@ -1,24 +1,36 @@
 <app-header></app-header>
-<br><br>
+<br><br><br><br>
 <app-desserts-search></app-desserts-search>
 <br>
 <app-desserts-tags></app-desserts-tags><br>
 <div class="select" style="text-align: center;"><a routerLink="/dessert_ie" style="color:black;">Include or Exclude your Ingredients</a></div>
 <br><br><br>
+
+
+<app-not-found [visible]="!desserts || !desserts.length" resetLinkText="Reset Search" [resetLinkRoute]="notFoundRedirectUrl"> </app-not-found>
         <!-- Food -->
      <ul>
       <li *ngFor="let dessert of desserts">
         <a routerLink="/desserts/{{dessert.id}}">
           <img [src]="dessert.imagePath" [alt]="dessert.name">
           <div class="content">
-            <div class="name">
+            <h5 class="name">
               {{dessert.name}}
-            </div>
+            </h5>
             <br>
-            <app-rating [stars]="dessert.stars"></app-rating><br><br>
-
-
-            <span class="favorite {{dessert.favorite?'':'not'}}">❤</span>
+            <div class="row">
+              <div class="col"><app-rating [stars]="dessert.stars"></app-rating></div>
+            <div style="color: black;" class="col">{{dessert.cookTime}} minutes ⏰</div>
+            </div>
+            <div class="calorieCount row" style="color:black;">
+              🥠🥠{{dessert.calorieAmount}}
+          </div>
+    
+            <br><br>
+    
+    
+            <span *ngIf="dessert.favorite" class="heart-icon">&#10084;</span>
+            <span *ngIf="!dessert.favorite" class="heart-icon" style="color: grey;">🖤</span>     
             <!-- <div class="stars">
               <star-rating [value]="food.stars"
               [totalstars]="5"
