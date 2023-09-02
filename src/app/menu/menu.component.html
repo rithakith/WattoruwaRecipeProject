@@ -12,13 +12,16 @@
                   <img class="card-img-top" [src]="item.imagePath" [alt]="item.name" style="height:300px;object-fit:cover;">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title">{{item.name}}</h5>
-                    <app-rating [stars]="item.stars"></app-rating><br><br>
-                    <div style="color: black;">{{item.cookTime}} minutes ⏰</div>
-                    <div class="calorieCount" >
-                      🔍🔍        {{item.calorieAmount}} calories
-                  </div>
-
+                    <h5 class="card-title">{{item.name}}</h5><br>
+                    <div class="row">
+                      <div class="col"><app-rating [stars]="item.stars"></app-rating></div>
+                      <div style="color: black;" class="col">{{item.cookTime}} minutes ⏰</div>
+                    </div>
+                      
+                      <div class="calorieCount row" >
+                      🥠🥠{{item.calorieAmount}} calories
+                    </div>
+                
                   </div>
                 </div>
                 
@@ -37,11 +40,12 @@
                   <img class="card-img-top" [src]="dessert.imagePath" [alt]="dessert.name" style="height:300px;object-fit:cover;">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title">{{dessert.name}}</h5>
-                    <app-rating [stars]="dessert.stars"></app-rating><br><br>
-                    <div>{{dessert.cookTime}} minutes ⏰</div>
-                    <div class="calorieCount" >
-                      🔍🔍        {{dessert.calorieAmount}} calories
+                    <h5 class="card-title">{{dessert.name}}</h5><br>
+                    <div class="row">
+                      <div class="col"><app-rating [stars]="dessert.stars"></app-rating></div>
+                    <div class="col">{{dessert.cookTime}} minutes ⏰</div></div>
+                    <div class="calorieCount row" >
+                      🥠🥠{{dessert.calorieAmount}} calories
                   </div>
 
                   </div>
@@ -60,11 +64,12 @@
                   <img class="card-img-top" [src]="drink.imagePath" [alt]="drink.name" style="height:300px;object-fit:cover;">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title">{{drink.name}}</h5>
-                    <app-rating [stars]="drink.stars"></app-rating><br><br>
-                    <div>{{drink.cookTime}} minutes ⏰</div>
-                    <div class="calorieCount" >
-                      🔍🔍        {{drink.calorieAmount}} calories
+                    <h5 class="card-title">{{drink.name}}</h5><br>
+                    <div class="row">
+                      <div class="col"><app-rating [stars]="drink.stars"></app-rating></div>
+                    <div class="col">{{drink.cookTime}} minutes ⏰</div></div>
+                    <div class="calorieCount row" >
+                      🥠🥠{{drink.calorieAmount}} calories
                   </div>
 
                   </div>
