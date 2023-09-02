@@ -14,7 +14,10 @@
                   <div class="card-body">
                     <h5 class="card-title">{{item.name}}</h5>
                     <app-rating [stars]="item.stars"></app-rating><br><br>
-                    <h6>Cook Time : {{item.cookTime}} minutes ⏰🍛</h6>
+                    <div style="color: black;">{{item.cookTime}} minutes ⏰</div>
+                    <div class="calorieCount" >
+                      🔍🔍        {{item.calorieAmount}} calories
+                  </div>
 
                   </div>
                 </div>
@@ -36,8 +39,10 @@
                   <div class="card-body">
                     <h5 class="card-title">{{dessert.name}}</h5>
                     <app-rating [stars]="dessert.stars"></app-rating><br><br>
-                    <h6>Cook Time : {{dessert.cookTime}} minutes ⏰🍛</h6>
-
+                    <div>{{dessert.cookTime}} minutes ⏰</div>
+                    <div class="calorieCount" >
+                      🔍🔍        {{dessert.calorieAmount}} calories
+                  </div>
 
                   </div>
                 </div>
@@ -57,7 +62,10 @@
                   <div class="card-body">
                     <h5 class="card-title">{{drink.name}}</h5>
                     <app-rating [stars]="drink.stars"></app-rating><br><br>
-                    <h6>Cook Time : {{drink.cookTime}} minutes ⏰🍛</h6>
+                    <div>{{drink.cookTime}} minutes ⏰</div>
+                    <div class="calorieCount" >
+                      🔍🔍        {{drink.calorieAmount}} calories
+                  </div>
 
                   </div>
                 </div>

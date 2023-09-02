@@ -15,7 +15,10 @@
               {{dessert.name}}
             </h5>
             <br>
-            <div style="color: black;">Cook Time : {{dessert.cookTime}} minutes ⏰🍛</div>
+            <div style="color: black;">{{dessert.cookTime}} minutes ⏰</div>
+            <div class="calorieCount" style="color:black;">
+              🔍🔍        {{dessert.calorieAmount}}
+          </div>
     
             <app-rating [stars]="dessert.stars"></app-rating><br><br>
     
