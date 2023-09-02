@@ -17,12 +17,14 @@
               {{food.name}}
             </h5>
             <br>
-            <div style="color: black;">{{food.cookTime}} minutes ⏰</div>
-            <div class="calorieCount" style="color:black;">
-              🔍🔍        {{food.calorieAmount}}
+            <div class="row">
+              <div class="col"><app-rating [stars]="food.stars"></app-rating></div>
+            <div style="color: black;" class="col">{{food.cookTime}} minutes ⏰</div></div>
+            <div class="calorieCount row" style="color:black;">
+              🥠🥠{{food.calorieAmount}}
           </div>
     
-            <app-rating [stars]="food.stars"></app-rating><br><br>
+            <br><br>
     
     
             <span *ngIf="food.favorite" class="heart-icon">&#10084;</span>
