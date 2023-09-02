@@ -16,7 +16,10 @@
           {{drink.name}}
         </h5>
         <br>
-        <div style="color: black;">Cook Time : {{drink.cookTime}} minutes ⏰🍛</div>
+        <div style="color: black;">{{drink.cookTime}} minutes ⏰</div>
+        <div class="calorieCount" style="color:black;">
+          🔍🔍        {{drink.calorieAmount}}
+      </div>
 
         <app-rating [stars]="drink.stars"></app-rating><br><br>
 
