@@ -6,9 +6,16 @@
           "traditional-foods-b7cee"
         ]
       }
+    },
+    "gold-gateway-397319": {
+      "hosting": {
+        "final": [
+          "gold-gateway-397319"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "traditional-foods-b7cee"
+    "default": "gold-gateway-397319"
   }
 }

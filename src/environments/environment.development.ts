@@ -1,12 +1,11 @@
 export const environment = {
-    firebase: {
-      projectId: 'traditional-foods-b7cee',
-      appId: '1:429730127713:web:63ee7273c59871cbd4af20',
-      storageBucket: 'traditional-foods-b7cee.appspot.com',
-      locationId: 'europe-west',
-      apiKey: 'AIzaSyDoIo1rDxIXORzdfeF9-MW8rwrkO-zQu6Y',
-      authDomain: 'traditional-foods-b7cee.firebaseapp.com',
-      messagingSenderId: '429730127713',
-      measurementId: 'G-W86VXQV8QX',
-    },
+  firebase: {
+    projectId: 'gold-gateway-397319',
+    appId: '1:245228608969:web:e295ce7a53260598ef1c18',
+    storageBucket: 'gold-gateway-397319.appspot.com',
+    apiKey: 'AIzaSyD_5lCmYoDmsmW05jq2BjEEM7CyXpXcVZM',
+    authDomain: 'gold-gateway-397319.firebaseapp.com',
+    messagingSenderId: '245228608969',
+    measurementId: 'G-T40CPFTNF9',
+  },
   };

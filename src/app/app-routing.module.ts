@@ -10,13 +10,14 @@ import { HomeComponent } from './home/home.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginComponent } from './portfolio/login/login.component';
 import { SignupComponent } from './portfolio/signup/signup.component';
-import { IncludeExcludeComponent } from './include-exclude/include-exclude.component';
+import { DessertIeComponent } from 'src/app/filter/dessert_filter/dessert-ie/dessert-ie.component';
 import { DrinksPageComponent } from './components/pages/drinks-page/drinks-page.component';
 import { DessertsPageComponent } from './components/pages/desserts-page/desserts-page.component';
 import { DashboardComponent } from './portfolio/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './portfolio/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './portfolio/verify-email/verify-email.component'; 
 import { UserFormComponent } from './components/user-form/user-form.component';
+
 
 const routes: Routes = [
   {path:'menu/food', component:FoodComponent},
@@ -33,13 +34,13 @@ const routes: Routes = [
   {path:'menu/food/tag/:tag',component:FoodComponent},
   {path:'menu/drinks/tag/:tag',component:DrinksComponent},
   {path:'menu/desserts/tag/:tag',component:DessertsComponent},
-
+  {path:'desert_ie',component:DessertsComponent},
   {path:'home',component:HomeComponent},
   {path:'calculator',component:CalculatorComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'dashboard',component:DashboardComponent},
-  {path:'filter',component:IncludeExcludeComponent},
+  {path:'dessert_ie',component:DessertIeComponent},
   {path:'forgot-password',component:ForgotPasswordComponent},
   {path:'verify-email',component:VerifyEmailComponent},
   {path:'user-form',component:UserFormComponent}
