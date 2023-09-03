@@ -1,39 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import { Desserts } from 'src/app/shared/models/desserts';
-import { sample_desserts, sample_tags } from 'src/desserts_data';
+import { Drinks } from 'src/app/shared/models/drinks';
+import { sample_drinks } from 'src/drinks_data';
+// Import your drink data
 
 @Component({
-  selector: 'app-dessert-ie',
-  templateUrl: './dessert-ie.component.html',
-  styleUrls: ['./dessert-ie.component.css']
+  selector: 'app-drink-ie', // Rename the selector accordingly
+  templateUrl: './drink-ie.component.html', // Rename the template file accordingly
+  styleUrls: ['./drink-ie.component.css'] // Rename the CSS file accordingly
 })
-export class DessertIeComponent implements OnInit {
+export class DrinkIeComponent implements OnInit {
   includeIngredient: string = '';
   includeCheckbox: boolean = false;
   excludeIngredient: string = '';
   excludeCheckbox: boolean = false;
-  desserts: Desserts[] = []; // Replace with your Desserts array
-  filteredDesserts: Desserts[] = []; // Initialize filteredDesserts array
+  drinks: Drinks[] = []; // Replace with your Drinks array
+  filteredDrinks: Drinks[] = []; // Initialize filteredDrinks array
 
   ngOnInit(): void {
-    // Initialize your desserts array with all recipes
-    this.desserts = sample_desserts; // Replace with your dessert data
+    // Initialize your drinks array with all recipes
+    this.drinks = sample_drinks; // Replace with your drink data
 
     // Show all recipes initially
     this.searchRecipes();
   }
 
   searchRecipes() {
-    // Filter desserts based on includeIngredient and excludeIngredient
-    this.filteredDesserts = this.desserts.filter((dessert) => {
+    // Filter drinks based on includeIngredient and excludeIngredient
+    this.filteredDrinks = this.drinks.filter((drink) => {
       const includesIngredient = this.includeCheckbox
-        ? dessert.ingredients.some((ingredient) =>
+        ? drink.ingredients.some((ingredient) =>
             ingredient.toLowerCase().includes(this.includeIngredient.toLowerCase())
           )
         : true; // Include by default if checkbox is not checked
 
       const excludesIngredient = this.excludeCheckbox
-        ? !dessert.ingredients.some((ingredient) =>
+        ? !drink.ingredients.some((ingredient) =>
             ingredient.toLowerCase().includes(this.excludeIngredient.toLowerCase())
           )
         : true; // Exclude by default if checkbox is not checked
@@ -48,7 +49,7 @@ export class DessertIeComponent implements OnInit {
       this.includeCheckbox &&
       this.excludeCheckbox
     ) {
-      this.filteredDesserts = this.desserts;
+      this.filteredDrinks = this.drinks;
     }
   }
 }

@@ -17,6 +17,8 @@ import { DashboardComponent } from './portfolio/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './portfolio/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './portfolio/verify-email/verify-email.component'; 
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { DrinkIeComponent } from './filter/drink_filter/drink-ie.component';
+import { FoodIeComponent } from './filter/food_filter/food-ie/food-ie.component';
 
 
 const routes: Routes = [
@@ -25,9 +27,9 @@ const routes: Routes = [
   {path:'menu/desserts',component:DessertsComponent},
   {path:'menu',component:MenuComponent},
   {path:'', redirectTo: 'login', pathMatch:'full'},
-   {path:'menu/food/search/:searchTerm',component:FoodComponent},
-   {path:'menu/drinks/search/:searchTerm',component:DrinksComponent} ,
-   {path:'menu/desserts/search/:searchTerm',component:DessertsComponent} ,
+  {path:'menu/food/search/:searchTerm',component:FoodComponent},
+  {path:'menu/drinks/search/:searchTerm',component:DrinksComponent} ,
+  {path:'menu/desserts/search/:searchTerm',component:DessertsComponent} ,
   {path:'food/:id',component:FoodPageComponent},
   {path:'drinks/:id',component:DrinksPageComponent},
   {path:'desserts/:id',component:DessertsPageComponent},
@@ -41,9 +43,11 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path:'dashboard',component:DashboardComponent},
   {path:'dessert_ie',component:DessertIeComponent},
+  {path:'drink_ie',component:DrinkIeComponent},
   {path:'forgot-password',component:ForgotPasswordComponent},
   {path:'verify-email',component:VerifyEmailComponent},
-  {path:'user-form',component:UserFormComponent}
+  {path:'user-form',component:UserFormComponent},
+  {path:'food_ie',component:FoodIeComponent}
 ];
 
 @NgModule({

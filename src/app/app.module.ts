@@ -36,6 +36,8 @@ import { DashboardComponent } from './portfolio/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './portfolio/forgot-password/forgot-password.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { NotFoundComponent } from './components/partials/not-found/not-found.component';
+import { DrinkIeComponent } from './filter/drink_filter/drink-ie.component';
+import { FoodIeComponent } from './filter/food_filter/food-ie/food-ie.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { NotFoundComponent } from './components/partials/not-found/not-found.com
     DashboardComponent,
     ForgotPasswordComponent,
     UserFormComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DrinkIeComponent,
+    FoodIeComponent
 
   ],
   imports: [

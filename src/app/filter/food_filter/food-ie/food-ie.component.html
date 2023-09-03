@@ -1,0 +1,67 @@
+<app-header></app-header>
+
+<div class="center">
+  <div class="row">
+    <div class="col custom-col">
+      <input class="form-control" [(ngModel)]="includeIngredient" list="datalistOptionsInclude" id="ingredientInclude" placeholder="Ingredient to include...">
+      <datalist id="datalistOptionsInclude">
+        <!-- Add options for food ingredients -->
+        <option value="Chicken">
+        <option value="Beef">
+        <option value="Vegetables">
+        <option value="Pasta">
+      </datalist>
+    </div>
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="includeCheckbox" id="includeCheckbox" name="includeCheckbox">
+        <label class="form-check-label" for="includeCheckbox" style="color: white;">
+          Include
+        </label>
+      </div>
+    </div>
+    <div class="col custom-col">
+      <input class="form-control" [(ngModel)]="excludeIngredient" list="datalistOptionsExclude" id="ingredientExclude" placeholder="Ingredient to exclude...">
+      <datalist id="datalistOptionsExclude">
+        <!-- Add options for food ingredients -->
+        <option value="Fish">
+        <option value="Nuts">
+        <option value="Dairy">
+        <option value="Gluten">
+      </datalist>
+    </div>
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="excludeCheckbox" id="excludeCheckbox" name="excludeCheckbox">
+        <label class="form-check-label" for="excludeCheckbox" style="color: white;">
+          Exclude
+        </label>
+      </div>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-light" (click)="searchRecipes()">Search</button>
+    </div>
+  </div>
+</div>
+
+<!-- Display Filtered Recipes Here -->
+<div *ngIf="filteredFoods.length > 0">
+  <h3>Filtered Foods</h3>
+  <ul>
+    <li *ngFor="let food of filteredFoods">
+      <a routerLink="/food/{{food.id}}">
+        <!-- Add the appropriate properties for food display -->
+        <img [src]="food.imagePath" [alt]="food.name">
+        <div class="content">
+          <div class="name">
+            {{food.name}}
+          </div>
+          <br>
+          <!-- You can display other food information here -->
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<app-footer></app-footer>
