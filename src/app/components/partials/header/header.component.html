@@ -7,7 +7,14 @@
         <nav>
             <ul>
                 <li><a routerLink="/home">Home</a></li>
-                <li><a routerLink="/menu">Food and Recipes</a></li>
+                <li class="dropdown"><a routerLink="/menu">Food and Recipes</a>
+                 <ul id="submenu">
+                    <li><a routerLink="/menu/food"><b>Food</b></a></li>
+                    <li><a routerLink="/menu/desserts"><b>Desserts</b></a></li>
+                    <li><a routerLink="/menu/drinks"><b>Drinks</b></a></li>
+                 </ul>
+                </li>
+                
                 <li><a routerLink="/calculator">Calorie Calculator</a></li>
                 <li><a routerLink="/signup" style="border:2px solid white;border-radius:20px">Sign up</a></li>
                 <li><a routerLink="/login" style="border:2px solid white;border-radius:20px">Log In</a></li>
