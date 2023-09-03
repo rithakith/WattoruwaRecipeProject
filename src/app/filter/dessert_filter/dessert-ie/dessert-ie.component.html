@@ -1,69 +1,79 @@
-<app-header></app-header>
+<div class="page-container">
+  <app-header></app-header>
 
-<div class="center">
-  <div class="row">
-    <div class="col custom-col">
-      <input class="form-control" [(ngModel)]="includeIngredient" list="datalistOptionsInclude" id="ingredientInclude" placeholder="Ingredient to include...">
-      <datalist id="datalistOptionsInclude">
-        <option value="Ginger">
-        <option value="Nuts">
-        <option value="Eggs">
-        <option value="Soyabeans">
-        <option value="Fish">
-      </datalist>
-    </div>
-    <div class="col">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="includeCheckbox" id="includeCheckbox" name="includeCheckbox">
-        <label class="form-check-label" for="includeCheckbox" style="color: white;">
-          Include
-        </label>
+  <h2>If you have any allergies just use our filter option</h2>
+  
+  <div class="center">
+    <div class="row">
+      <div class="col custom-col">
+        <input class="form-control" [(ngModel)]="includeIngredient" list="datalistOptionsInclude" id="ingredientInclude" placeholder="Ingredient to include...">
+        <datalist id="datalistOptionsInclude">
+          <option value="Ginger">
+          <option value="Nuts">
+          <option value="Eggs">
+          <option value="Soyabeans">
+          <option value="Fish">
+        </datalist>
+      </div>
+      <div class="col">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" [(ngModel)]="includeCheckbox" id="includeCheckbox" name="includeCheckbox">
+          <label class="form-check-label" for="includeCheckbox" style="color: white;">
+            Include
+          </label>
+        </div>
+      </div>
+      <div class="col custom-col">
+        <input class="form-control" [(ngModel)]="excludeIngredient" list="datalistOptionsExclude" id="ingredientExclude" placeholder="Ingredient to exclude...">
+        <datalist id="datalistOptionsExclude">
+          <option value="Ginger">
+          <option value="Nuts">
+          <option value="Eggs">
+          <option value="Soyabeans">
+          <option value="Fish">
+        </datalist>
+      </div>
+      <div class="col">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" [(ngModel)]="excludeCheckbox" id="excludeCheckbox" name="excludeCheckbox">
+          <label class="form-check-label" for="excludeCheckbox" style="color: white;">
+            Exclude
+          </label>
+        </div>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-light" (click)="searchRecipes()">Search</button>
       </div>
     </div>
-    <div class="col custom-col">
-      <input class="form-control" [(ngModel)]="excludeIngredient" list="datalistOptionsExclude" id="ingredientExclude" placeholder="Ingredient to exclude...">
-      <datalist id="datalistOptionsExclude">
-        <option value="Ginger">
-        <option value="Nuts">
-        <option value="Eggs">
-        <option value="Soyabeans">
-        <option value="Fish">
-      </datalist>
-    </div>
-    <div class="col">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="excludeCheckbox" id="excludeCheckbox" name="excludeCheckbox">
-        <label class="form-check-label" for="excludeCheckbox" style="color: white;">
-          Exclude
-        </label>
-      </div>
-    </div>
-    <div class="col">
-      <button type="button" class="btn btn-light" (click)="searchRecipes()">Search</button>
-    </div>
-  </div>
-</div>
-
-<!-- Display Filtered Recipes Here -->
-<!-- Display Filtered Recipes Here -->
-<div *ngIf="filteredDesserts.length > 0">
-    <h3>Filtered Recipes</h3>
-    <ul>
-      <li *ngFor="let dessert of filteredDesserts">
-        <a routerLink="/desserts/{{dessert.id}}">
-          <img [src]="dessert.imagePath" [alt]="dessert.name">
-          <div class="content">
-            <div class="name">
-              {{dessert.name}}
-            </div>
-            <br>
-            <app-rating [stars]="dessert.stars"></app-rating><br><br>
-            <span class="favorite {{dessert.favorite?'':'not'}}">❤</span>
-          </div>
-        </a>
-      </li>
-    </ul>
   </div>
   
+  <!-- Display Filtered Recipes Here -->
+  <!-- Display Filtered Recipes Here -->
+  <div *ngIf="filteredDesserts.length > 0">
+      <h3 style="text-align: center;">Filtered Recipes</h3>
+      <ul>
+        <li *ngFor="let dessert of filteredDesserts">
+          <a routerLink="/desserts/{{dessert.id}}">
+            <img [src]="dessert.imagePath" [alt]="dessert.name">
+            <div class="content">
+              <h5 class="name">
+                {{dessert.name}}
+              </h5>
+          
+              <app-rating [stars]="dessert.stars"></app-rating>
+              <div style="color: black;" class="col">{{dessert.cookTime}} minutes ⏰</div>
+              
+              <div class="calorieCount " style="color:black;">
+                {{dessert.calorieAmount}}🥠🥠
+            </div>
+          </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+  
+  <app-footer class="footer"></app-footer>
+  
+</div>
 
-<app-footer></app-footer>
