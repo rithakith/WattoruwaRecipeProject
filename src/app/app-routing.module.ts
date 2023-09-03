@@ -43,7 +43,7 @@ const routes: Routes = [
   {path:'dessert_ie',component:DessertIeComponent},
   {path:'forgot-password',component:ForgotPasswordComponent},
   {path:'verify-email',component:VerifyEmailComponent},
-  {path:'user-form',component:UserFormComponent}
+  {path:'user-form',component:UserFormComponent},
 ];
 
 @NgModule({

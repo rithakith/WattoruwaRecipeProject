@@ -29,3 +29,78 @@
     max-width: 400px; /* Adjust the value to control the maximum width */
     min-width: 250px;
 }
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 10;
+}
+
+li a{
+    height: 25rem ;
+    width: 25rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin:2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #e72929;
+    text-decoration: none;
+    box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
+}
+
+li a:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    
+}
+
+li a img{
+    object-fit: cover;
+    height: 14.5rem;
+
+}
+
+.content{
+    margin-top: 0.3rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    height: 7rem;
+}
+.favorite{
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.2rem;
+}
+
+.favorite.not{
+    color:grey;
+}
+
+.product-item-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.heart-icon {
+    font-size: 17;
+    color: red;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: translate(50%, -50%);
+}
+.footer{
+    background-color: red;
+    margin-top: auto;
+}
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
