@@ -8,7 +8,7 @@ header{
   background-color: #CA813E;
   padding-top:5px;
   padding-bottom: 5px;
-  overflow: hidden;
+  overflow: visible;
   z-index: 1000;
   position: fixed;
   top: 0;
@@ -50,4 +50,33 @@ ul{
 ul a{
   padding: 1rem;
   display: inline-block;
+}
+#submenu{
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  visibility: hidden;
+  z-index: 1000;
+  background-color: white;
+}
+.dropdown:hover #submenu {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1001;
+}
+#submenu li{
+  float: none;
+  background-color: #FFFFE0;
+}
+#submenu a {
+  padding: 10px 20px; /* Adjust padding as needed */
+  display: block;
+  color: black; /* Adjust the text color */
+  text-decoration: none;
+}
+#submenu a:hover {
+  background-color: #CA813E; /* Change the background color on hover */
+  color: white; /* Change the text color on hover */
+  font-weight: bold;
 }
