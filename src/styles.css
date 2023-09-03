@@ -1,11 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 .comments {
     margin-top: 20px;
+    margin-left: 140px;
+    margin-right: 100px;
   }
   
   .comments-title {
     font-size: 30px;
     margin-bottom: 20px;
+    color: #5C4033;
+    text-decoration: underline;
+    font-weight: bolder;
   }
   
   .comments-container {
@@ -14,6 +19,8 @@
   
   .comment-form-title {
     font-size: 22px;
+    color: #C09408;
+    font-weight: bold;
   }
   
   .comment-form-textarea {
@@ -27,14 +34,16 @@
   .comment-form-button {
     font-size: 16px;
     padding: 8px 16px;
-    background: rgb(59, 130, 246);
-    border-radius: 8px;
-    color: white;
+    background: #EECC5D;
+    border-radius: 6px;
+    color: black;
+    font-weight: bolder;
   }
   
   .comment-form-button:hover:enabled {
     cursor: pointer;
-    background: rgb(37, 99, 235);
+    background: white;
+    color: #EECC5D;
   }
   
   .comment-form-button:disabled {
@@ -70,7 +79,8 @@
   .comment-author {
     margin-right: 8px;
     font-size: 20px;
-    color: rgb(59, 130, 246);
+    color: #5C4033;
+    font-weight: 700;
   }
   
   .comment-text {
