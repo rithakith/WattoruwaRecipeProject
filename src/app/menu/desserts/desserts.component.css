@@ -8,16 +8,18 @@ ul{
 }
 
 li a{
-    height: 25rem ;
+    height: 24rem ;
     width: 23rem;
-    border: 1px solid whitesmoke;
     border-radius: 1rem;
-    margin: 0.5rem;
+    margin:2rem 1rem;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     color: #e72929;
     text-decoration: none;
+    box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
+
+
 }
 
 li a:hover{
@@ -60,3 +62,28 @@ li a img{
     right: 20px;
     transform: translate(50%, -50%);
 }
+/* Style the entire row containing rating, cook time, and calorie amount */
+.row-rating {
+    display: flex;
+    align-items: center; /* Vertically center items within the row */
+    margin-top: 0.8rem; /* Adjust the margin as needed */
+  }
+  
+  /* Style the rating component */
+  .col-rating {
+    flex: 1; /* Allow the rating to expand and take available space */
+  }
+  
+  /* Style the cook time and calorie amount */
+  .col-cook-time, .col-calorie-count {
+    flex: 1; /* Allow both to expand and take available space */
+    text-align: right; /* Right-align the content */
+    color: black; /* Adjust the color as needed */
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  .calorieCount {
+    margin-top: 0.3rem; /* Adjust the margin as needed */
+    color: black; /* Adjust the color as needed */
+    text-align: left; /* Left-align the content */
+  }

@@ -1,4 +1,6 @@
 <app-header></app-header>
+<br><br><br><br>
+
 <div class="container">
     <img [src]="drinks.imagePath" [alt]="drinks.name">
 
@@ -14,11 +16,17 @@
                 <a *ngFor="let tag of drinks.tags" routerLink="/tag/{{tag}}">{{tag}}</a>
                </div>
             <br>
-            <h6>{{drinks.cookTime}} minutes ⏰</h6>
-               <br><br>
-            <div class="calorieCount" style="font-weight: bold;">
-                🥠🥠        {{drinks.calorieAmount}}
-            </div><br>
+            <div class="calorieCookTime">
+                <div class="calorieCount">
+                  🥠🥠{{drinks.calorieAmount}}
+                </div>
+              
+                <div class="cookTime">
+                  {{drinks.cookTime}} minutes ⏰
+                </div>
+              </div>
+              
+              <br>
             <div class="ingredients">
                 <h3>Ingredients :</h3>
 

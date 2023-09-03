@@ -6,7 +6,8 @@
 <div class="select" style="text-align: center;"><a routerLink="/filter" style="color:black;">Include or Exclude your
     Ingredients</a></div>
 <br><br><br>
-<app-not-found [visible]="!drinks || !drinks.length" resetLinkText="Reset Search" [resetLinkRoute]="notFoundRedirectUrl"> </app-not-found>
+<app-not-found [visible]="!drinks || !drinks.length" resetLinkText="Reset Search"
+  [resetLinkRoute]="notFoundRedirectUrl"> </app-not-found>
 
 <!-- Drinks -->
 <ul>
@@ -17,19 +18,27 @@
         <h5 class="name">
           {{drink.name}}
         </h5>
-        <br>
-        <div class="row">
-          <div class="col"><app-rating [stars]="drink.stars"></app-rating></div>
-        <div style="color: black;" class="col">{{drink.cookTime}} minutes ⏰</div></div>
-        <div class="calorieCount row" style="color:black;">
+ 
+        
+        <div class="row-rating">
+          <div class="col-rating">
+            <app-rating [stars]="drink.stars"></app-rating>
+          </div>
+          <div class="col-cook-time">
+            {{drink.cookTime}} minutes ⏰
+          </div>
+        </div>
+        
+        <div class="calorieCount">
           🥠🥠{{drink.calorieAmount}}
-      </div>
+        </div>
+        
 
         <br><br>
 
 
         <span *ngIf="drink.favorite" class="heart-icon">&#10084;</span>
-        <span *ngIf="!drink.favorite" class="heart-icon" style="color: grey;">🖤</span>        <!-- <div class="stars">
+        <span *ngIf="!drink.favorite" class="heart-icon" style="color: grey;">🖤</span> <!-- <div class="stars">
           <star-rating [value]="food.stars"
           [totalstars]="5"
           checkedcolor="red"
@@ -41,7 +50,7 @@
       </div>
 
     </a>
-    <br><br><br><br>
+    <!-- <br><br><br><br> -->
   </li>
 </ul>
 <comments currentUserId="2"></comments>

@@ -60,10 +60,27 @@ img{
     color: #CA813E;
 } 
 
-.calorieCount{
+  /* /////////////// */
+  .calorieCookTime {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .calorieCount,
+  .cookTime {
     border: 1px solid black;
-    width: 200px;
     padding: 10px 0;
     text-align: center;
     border-radius: 10px;
-}
+    margin-right: 1rem; /* Adjust the margin as needed for spacing */
+  }
+  
+  .calorieCount {
+    width: 200px;
+  }
+  
+  .cookTime {
+    padding: 10px 30px;/* Let it grow based on content */
+  }
+  

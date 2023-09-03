@@ -1,85 +1,116 @@
 <app-header></app-header>
- <div class="empty-space" style="height:150px;"></div>
-        
-        <!-- Food -->
-        <div class="container">
-          <h2 class="name">Food</h2>
-          <div class="empty-space" style="height: 30px;"></div>
-          <div class="row g-5 row-width">
-                <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of items">
-                <div class="card shadow">
-                <div class="aspect-ratio">
-                  <img class="card-img-top" [src]="item.imagePath" [alt]="item.name" style="height:300px;object-fit:cover;">
-                </div>
-                  <div class="card-body">
-                    <h5 class="card-title">{{item.name}}</h5><br>
-                    <div class="row">
-                      <div class="col"><app-rating [stars]="item.stars"></app-rating></div>
-                      <div style="color: black;" class="col">{{item.cookTime}} minutes ⏰</div>
-                    </div>
-                      
-                      <div class="calorieCount row" >
-                      🥠🥠{{item.calorieAmount}} calories
-                    </div>
-                
-                  </div>
-                </div>
-                
-                </div>
-                <button type="button" routerLink="/menu/food" class="btn btn-danger button-clz" style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;"> View More </button>
-             
+<div class="empty-space" style="height:150px;"></div>
 
-        <!-- Desserts -->
-        <h2 class="name">Desserts</h2> <div class="empty-space" style="height: 30px;"></div>
-
-        <div class="container">
-            <div class="row g-5 row-width">
-                <div class="col-12 col-md-6 col-lg-4" *ngFor="let dessert of desserts">
-                <div class="card shadow">
-                <div class="aspect-ratio">
-                  <img class="card-img-top" [src]="dessert.imagePath" [alt]="dessert.name" style="height:300px;object-fit:cover;">
-                </div>
-                  <div class="card-body">
-                    <h5 class="card-title">{{dessert.name}}</h5><br>
-                    <div class="row">
-                      <div class="col"><app-rating [stars]="dessert.stars"></app-rating></div>
-                    <div class="col">{{dessert.cookTime}} minutes ⏰</div></div>
-                    <div class="calorieCount row" >
-                      🥠🥠{{dessert.calorieAmount}} calories
-                  </div>
-
-                  </div>
-                </div>
-                </div>
-                <button type="button" routerLink="/menu/desserts" class="btn btn-danger button-clz" style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;"> View More </button>
+<!-- Food -->
+<div class="container">
+  <h2 class="name">Food</h2>
+  <div class="empty-space" style="height: 30px;"></div>
+  <div class="row g-5 row-width">
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of items">
+      <div class="card shadow">
+        <div class="aspect-ratio">
+          <img class="card-img-top" [src]="item.imagePath" [alt]="item.name" style="height:300px;object-fit:cover;">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <div class="row-rating">
+            <div class="col-rating">
+              <app-rating [stars]="item.stars"></app-rating>
+            </div>
+            <div class="col-cook-time">
+              {{item.cookTime}} minutes ⏰
+            </div>
+          </div>
           
+          <div class="calorieCount">
+            🥠🥠 {{item.calorieAmount}} Calories
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <button type="button" routerLink="/menu/food" class="btn btn-danger button-clz"
+      style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;"> View
+      More </button>
+
+
+    <!-- Desserts -->
+    <h2 class="name">Desserts</h2>
+    <div class="empty-space" style="height: 30px;"></div>
+
+    <div class="container">
+      <div class="row g-5 row-width">
+        <div class="col-12 col-md-6 col-lg-4" *ngFor="let dessert of desserts">
+          <div class="card shadow">
+            <div class="aspect-ratio">
+              <img class="card-img-top" [src]="dessert.imagePath" [alt]="dessert.name"
+                style="height:300px;object-fit:cover;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{dessert.name}}</h5>
+              <div class="row-rating">
+                <div class="col-rating">
+                  <app-rating [stars]="dessert.stars"></app-rating>
+                </div>
+                <div class="col-cook-time">
+                  {{dessert.cookTime}} minutes ⏰
+                </div>
+              </div>
+
+              <div class="calorieCount">
+                🥠🥠 {{dessert.calorieAmount}} Calories
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" routerLink="/menu/desserts" class="btn btn-danger button-clz"
+          style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;">
+          View More </button>
+
         <!-- Drinks -->
-        <h2 class="name">Drinks</h2> <div class="empty-space" style="height:30px;"></div>
+        <h2 class="name">Drinks</h2>
+        <div class="empty-space" style="height:30px;"></div>
 
         <div class="container">
-            <div class="row g-5 row-width">
-                <div class="col-12 col-md-6 col-lg-4" *ngFor="let drink of drinks">
-                <div class="card shadow">
+          <div class="row g-5 row-width">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let drink of drinks">
+              <div class="card shadow">
                 <div class="aspect-ratio">
-                  <img class="card-img-top" [src]="drink.imagePath" [alt]="drink.name" style="height:300px;object-fit:cover;">
+                  <img class="card-img-top" [src]="drink.imagePath" [alt]="drink.name"
+                    style="height:300px;object-fit:cover;">
                 </div>
-                  <div class="card-body">
-                    <h5 class="card-title">{{drink.name}}</h5><br>
-                    <div class="row">
-                      <div class="col"><app-rating [stars]="drink.stars"></app-rating></div>
-                    <div class="col">{{drink.cookTime}} minutes ⏰</div></div>
-                    <div class="calorieCount row" >
-                      🥠🥠{{drink.calorieAmount}} calories
+                <div class="card-body">
+                  <h5 class="card-title">{{drink.name}}</h5>
+                  <div class="row-rating">
+                    <div class="col-rating">
+                      <app-rating [stars]="drink.stars"></app-rating>
+                    </div>
+                    <div class="col-cook-time">
+                      {{drink.cookTime}} minutes ⏰
+                    </div>
                   </div>
-
+                  
+                  <div class="calorieCount">
+                    🥠🥠 {{drink.calorieAmount}} Calories
                   </div>
-                </div>
-                </div>
-                <button type="button" routerLink="/menu/drinks" class="btn btn-danger button-clz" style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;"> View More </button>
-                
-        <!-- comment section -->
-            </div></div></div></div></div></div><br><br><br>
         
+
+                </div>
+              </div>
+            </div>
+            <button type="button" routerLink="/menu/drinks" class="btn btn-danger button-clz"
+              style="background-color:#e72929;border:none;padding:10px;margin-left:auto;width:100px;margin-right:50px;">
+              View More </button>
+
+            <!-- comment section -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><br><br>
+
 <router-outlet></router-outlet>
 
 <app-footer></app-footer>

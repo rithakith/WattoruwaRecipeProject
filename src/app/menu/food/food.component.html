@@ -16,13 +16,21 @@
             <h5 class="name">
               {{food.name}}
             </h5>
-            <br>
-            <div class="row">
-              <div class="col"><app-rating [stars]="food.stars"></app-rating></div>
-            <div style="color: black;" class="col">{{food.cookTime}} minutes ⏰</div></div>
-            <div class="calorieCount row" style="color:black;">
+
+            <div class="row-rating">
+              <div class="col-rating">
+                <app-rating [stars]="food.stars"></app-rating>
+              </div>
+              <div class="col-cook-time">
+                {{food.cookTime}} minutes ⏰
+              </div>
+            </div>
+            
+            <div class="calorieCount">
               🥠🥠{{food.calorieAmount}}
-          </div>
+            </div>
+            
+    
     
             <br><br>
     

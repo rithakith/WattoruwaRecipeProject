@@ -3,35 +3,42 @@
 <app-desserts-search></app-desserts-search>
 <br>
 <app-desserts-tags></app-desserts-tags><br>
-<div class="select" style="text-align: center;"><a routerLink="/dessert_ie" style="color:black;">Include or Exclude your Ingredients</a></div>
+<div class="select" style="text-align: center;"><a routerLink="/dessert_ie" style="color:black;">Include or Exclude your
+    Ingredients</a></div>
 <br><br><br>
 
 
-<app-not-found [visible]="!desserts || !desserts.length" resetLinkText="Reset Search" [resetLinkRoute]="notFoundRedirectUrl"> </app-not-found>
-        <!-- Food -->
-     <ul>
-      <li *ngFor="let dessert of desserts">
-        <a routerLink="/desserts/{{dessert.id}}">
-          <img [src]="dessert.imagePath" [alt]="dessert.name">
-          <div class="content">
-            <h5 class="name">
-              {{dessert.name}}
-            </h5>
-            <br>
-            <div class="row">
-              <div class="col"><app-rating [stars]="dessert.stars"></app-rating></div>
-            <div style="color: black;" class="col">{{dessert.cookTime}} minutes ⏰</div>
-            </div>
-            <div class="calorieCount row" style="color:black;">
-              🥠🥠{{dessert.calorieAmount}}
+<app-not-found [visible]="!desserts || !desserts.length" resetLinkText="Reset Search"
+  [resetLinkRoute]="notFoundRedirectUrl"> </app-not-found>
+<!-- Food -->
+<ul>
+  <li *ngFor="let dessert of desserts">
+    <a routerLink="/desserts/{{dessert.id}}">
+      <img [src]="dessert.imagePath" [alt]="dessert.name">
+      <div class="content">
+        <h5 class="name">
+          {{dessert.name}}
+        </h5>
+        <div class="row-rating">
+          <div class="col-rating">
+            <app-rating [stars]="dessert.stars"></app-rating>
           </div>
-    
-            <br><br>
-    
-    
-            <span *ngIf="dessert.favorite" class="heart-icon">&#10084;</span>
-            <span *ngIf="!dessert.favorite" class="heart-icon" style="color: grey;">🖤</span>     
-            <!-- <div class="stars">
+          <div class="col-cook-time">
+            {{dessert.cookTime}} minutes ⏰
+          </div>
+        </div>
+        
+        <div class="calorieCount">
+          🥠🥠{{dessert.calorieAmount}}
+        </div>
+        
+
+        <br><br>
+
+
+        <span *ngIf="dessert.favorite" class="heart-icon">&#10084;</span>
+        <span *ngIf="!dessert.favorite" class="heart-icon" style="color: grey;">🖤</span>
+        <!-- <div class="stars">
               <star-rating [value]="food.stars"
               [totalstars]="5"
               checkedcolor="red"
@@ -39,16 +46,16 @@
               size="22px"
               [readonly]="true"></star-rating>
             </div> -->
-          
-          </div>
 
-        </a>
-      </li>
-     </ul>
-        
+      </div>
 
-        
+    </a>
+  </li>
+</ul>
 
-        <!-- comment section -->
+
+
+
+<!-- comment section -->
 
 <app-footer></app-footer>
