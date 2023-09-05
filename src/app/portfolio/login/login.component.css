@@ -97,5 +97,23 @@ body{
                 box-shadow: 0 0 0 0.2rem rgba(120, 48, 48, 0.5);
             }
 
+.btn-outline{
+    border: solid rgb(37, 125, 212) 1px;
+    color: rgb(32, 136, 220);
+    background-color: aliceblue;
+    margin-left: 50px;
+    font-size: 15px;
+    text-indent: 5px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+
+}
+.google{
+    width: 25px;
+}
+
+
 
          
