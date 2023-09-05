@@ -36,6 +36,10 @@ body{
     border-color: #783030;
     border-width: 10px;
 }
+.or-style{
+    padding-left: 150px;
+    font-weight: bold;
+}
 
 
 /*------------ For small screens------------*/
